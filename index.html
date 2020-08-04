@@ -1,0 +1,213 @@
+<html>
+<head>
+<title>GreySpace Business</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body
+.hero-image {
+  background-image: url("download.jpg");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: right;
+  position: right;
+}
+
+ul  {
+  list-style: square inside url("sqpurple.gif");
+}
+ul.a {
+  list-style-position: outside;
+}
+
+ul.b {
+  list-style-position: inside;
+}
+span {
+  border: 5px solid red;
+  padding:  0em 1em;
+  border-radius: 16px;
+  font-size: 24px;
+  line-height: 2;
+}
+box-shadow:{
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
+div {
+  width: 200px;
+  height: 200px;
+  background: red;
+  position: center;
+  animation: mymove 5s infinite;
+}
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 200px;}
+}
+body {
+  background-color: DarkGrey;
+  body {
+    background-image: url("img_tree.gif"), url("paper.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+p {
+  Front-family:
+  Front-size: 20px;
+}
+h1 {
+  Color: White;
+  text-align: center;
+  border-left-style: solid;
+  border-left-color: black
+}
+</style>
+</head>
+</body>
+
+<h1>Welcome to the GreySpace Business<h1>
+
+  <ul>
+  <li>Contact</li>
+  <li>About Us</li>
+  <li>Stories</li>
+</ul>
+
+<h2>The list-style-position Property</h1>
+
+<h3>list-style-position: outside:</h3>
+<ul class="a">
+  <li>Contac us - Live chats, email, phone number,soical media </li>
+  <li>About us -We are a company that helps provide services to help thoughs who don't confertable in their own skin and need a safe free space and be allowed to speak freely without judgement by others.</li>
+  <li>Storeies- Here are some stories that are given by the team of the website as a start to show you that even we as a team don't know who wrote which story.</li>
+</ul>
+
+<h3>list-style-position: inside:</h3>
+<ul class="b">
+  <li>Contact us - links to live chat, soical media accounts, team email</li>
+  <li>About us - Greyspace Company is a team that wanted to create a website where everyone can be free to express how they feel without being judged. There is no negivate comments because we have a filter in place and a team that keeps track of all comments before they are posted ono the site.</li>
+  <li>Stories- All and even stories can be seen here, any stories that you as the user post are hidden from anyone who can view it even the team, unless you change the privacy settings within your account.</li>
+</ul>
+
+  <div>Here you can choose what you would like to see on the site, by clicking the tabs.</div>
+  <div class="hero-image">
+  <div class="hero-text">
+  </div>
+</div>
+
+<p><strong> Note:</strong> This is the GreySpace Business, welcome to a new company that
+will launching soon. You will have many different things view on this site coming soon.</p>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<h2>Popup Chat Window</h2>
+<p>Click on the button at the bottom of this page to open the chat form.</p>
+<p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
+
+<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
